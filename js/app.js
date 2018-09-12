@@ -28,7 +28,7 @@ particlesJS('particles-js',
       }
     },
     "opacity": {
-      "value": 0, //不透明度
+      "value": 1, //不透明度
       "random": true, //随机不透明度
       "anim": {
         "enable": true, //渐变动画
@@ -74,7 +74,7 @@ particlesJS('particles-js',
     "events": {
       "onhover": {
         "enable": true, //悬停
-        "mode": ["grab", "bubble"] //悬停模式      "grab"抓取临近的,"bubble"泡沫球效果,"repulse"击退效果,["grab", "bubble"]
+        "mode":  "bubble" //悬停模式      "grab"抓取临近的,"bubble"泡沫球效果,"repulse"击退效果,["grab", "bubble"]
       },
       "onclick": {
         "enable": false,  //点击效果
@@ -90,8 +90,8 @@ particlesJS('particles-js',
         }
       },
       "bubble": {
-        "distance": 125, //原子抓取泡沫效果之间的距离
-        "size": 4, // 原子抓取泡沫效果之间的大小
+        "distance": 200, //原子抓取泡沫效果之间的距离
+        "size": 5, // 原子抓取泡沫效果之间的大小
         "duration": 2, //原子抓取泡沫效果之间的持续事件
         "opacity": 0.7, //原子抓取泡沫效果透明度
         "speed": 3 
