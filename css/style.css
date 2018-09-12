@@ -1,0 +1,115 @@
+
+html,body{ 
+	width:100%;
+	height:100%;
+	overflow: hidden
+}
+
+
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background:url(../img/index/popur.png),-webkit-radial-gradient(circle, #082573,#000c2f) /* Safari 5.1 - 6.0 */ ;
+  background:url(../img/index/popur.png),-o-radial-gradient(circle, #082573,#000c2f); /* Opera 11.6 - 12.0 */
+  background:url(../img/index/popur.png),-moz-radial-gradient(circle, #082573,#000c2f)/* Firefox 3.6 - 15 */
+  background:url(../img/index/popur.png),radial-gradient(circle, #082573,#000c2f); /* 标准的语法 */
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.popur{
+	z-index: 0;
+	position: absolute;
+	background-image:url(../img/index/popur.png);
+	width: 100%;
+	height: 100%;
+}
+
+#stars{width: 100%;}
+.star {
+	z-index: 1;
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #FFF;
+    position: absolute;
+    transform-origin: 100% 0;
+    animation: star-ani 12s linear infinite;
+    -webkit-animation:star-ani 12s linear infinite;
+    -moz-animation:star-ani 12s linear infinite;
+    -o-animation: star-ani 12s linear infinite;
+    box-shadow: 0 0 5px 5px rgba(255, 255, 255, .3);
+    opacity: 0;
+}
+.star:after {
+    content: '';
+    display: block;
+    top: 0px;
+    left: 4px;
+    border: 0px solid #fff;
+    border-width: 0px 90px 2px 90px;
+    border-color: transparent transparent transparent rgba(255, 255, 255, .3);
+    transform: rotate(-45deg) translate3d(1px, 3px, 0);
+    box-shadow: 0 0 1px 0 rgba(255, 255, 255, .1);
+    transform-origin: 0% 100%;
+}
+
+@keyframes star-ani {
+    0% {
+        opacity: 0;
+        transform: scale(0) translate3d(0, 0, 0);
+    }
+    20%{
+        opacity: 0.8;
+        transform: scale(0.2) translate3d(-100px, 100px, 0);
+    }
+    40% {
+        opacity: 0.8;
+        transform: scale(0.4) translate3d(-200px, 200px, 0);
+    }
+    60% {
+        opacity: 0.8;
+        transform: scale(0.6) translate3d(-300px, 300px, 0);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(1) translate3d(-350px, 350px, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.2) translate3d(-400px, 380px, 0);
+    }  
+}
+
+@keyframes star-rotate {
+	0%{
+		transform:rotate(0deg);
+		-ms-transform:rotate(0deg); 	/* IE 9 */
+		-moz-transform:rotate(0deg); 	/* Firefox */
+		-webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+		-o-transform:rotate(0deg); 	/* Opera */
+	}
+	100%{
+		transform:rotate(360deg);
+		-ms-transform:rotate(360deg); 	/* IE 9 */
+		-moz-transform:rotate(360deg); 	/* Firefox */
+		-webkit-transform:rotate(360deg); /* Safari 和 Chrome */
+		-o-transform:rotate(360deg); 	/* Opera */
+	}
+}
+
+
+.index-each{width: 50%;position: absolute;left: 50%;margin-left: -25%;top: 50%;margin-top: -3%;z-index: 2;}
+.each{width: 60%;position: absolute;top: 50%;margin-top: -25%;left: 50%;margin-left: -30%;}
+.each img{width: 100%;animation: star-rotate 48s linear infinite;-webkit-animation:star-rotate 48s linear infinite;-moz-animation:star-rotate 48s linear infinite;-o-animation: star-rotate 48s linear infinite}
+.index-each-frame{width: 70%;position: absolute;top: 50%;margin-top: -30%;left: 50%;margin-left: -35%;}
+.index-each-frame img{width: 100%;animation: star-rotate 24s linear infinite;-webkit-animation:star-rotate 24s linear infinite;-moz-animation:star-rotate 24s linear infinite;-o-animation: star-rotate 24s linear infinite}
